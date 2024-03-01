@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam_2</title>
+</head>
+<body>
+<script>
+    let man = {
+        name: "Alex",
+        age: 22,
+        gender: "male",
+        address: {
+            country: "Country"
+        },
+        marital_status: "married",
+        kid: [
+            {
+                name: "Emily",
+                age: 8,
+                grandchildren: [
+                    {
+                        name: "Alice",
+                        age: 13
+                    },
+                ]
+            }
+        ]
+    };
+    /*Переменная `newPerson` создается на основе переменной `man` с помощью распыления. При этом используется следующая логика:
+        - Все свойства объекта `man` копируются в `newPerson`.
+    - Свойство `kid` также копируется из `man`, но затем перезаписывается — вместо существующего элемента массива создается новый объект с помощью распыления.
+    - В созданный объект добавляется новое свойство `grandchildren`, которое также получает копию существующих данных о внуках и одновременно добавляет новый элемент.
+
+        Таким образом, переменная `newPerson` будет содержать все данные из `man`, а также изменения в свойстве `kid`, чтобы добавить информацию о новом внуке.*/
+    let newPerson = {
+        ...man,
+        kid: [
+            {
+                ...man.kid[0],
+                grandchildren: [
+                    ...man.kid[0].grandchildren,
+                    {
+                        name: "Bob",
+                        age: 15
+                    }
+                ]
+            }
+        ]
+    };
+    console.log(man);
+    console.log(newPerson);
+</script>
+</body>
+</html>

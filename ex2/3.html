@@ -2,51 +2,50 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Exam_2</title>
+    <meta charset="UTF-8">
+    <title>Exam_2</title>
 </head>
 
 <body>
-  <script>
+<script>
     let mister = {
-      name: "John",
-      age: 35,
-      gender: "male",
-      address: {
-        street: "123 Main St",
-        city: "Cityville",
-        state: "State",
-        country: "Country"
-      },
-      passport: {
-        number: "ABC123XYZ",
-      },
-      marital_status: "married",
-      kid: [
-        {
-          name: "Emily",
-          age: 8
+        name: "John",
+        age: 35,
+        gender: "male",
+        address: {
+            street: "123 Main St",
+            city: "Cityville",
+            state: "State",
+            country: "Country"
         },
-      ]
+        passport: {
+            number: "ABC123XYZ",
+        },
+        marital_status: "married",
+        kid: [
+            {
+                name: "Emily",
+                age: 8
+            },
+        ]
     };
 
     let newPerson = {
-      ...mister,//копирование всех свойств из объекта `mister`.
-      kid: [//Свойство `kid` в объекте `newPerson` изменяется на новый массив, содержащий информацию о новом ребенке с именем "Kate" и возрастом 11 лет, вместо дочери "Emily" из объекта `mister`.
-        {
-          name: "Kate",
-          age: 11
-        }
-      ]
+        ...mister,//копирование всех свойств из объекта `mister`.
+        kid: [//Свойство `kid` в объекте `newPerson` изменяется на новый массив, содержащий информацию о новом ребенке с именем "Kate" и возрастом 11 лет, вместо дочери "Emily" из объекта `mister`.
+            {
+                name: "Kate",
+                age: 11
+            }
+        ]
     };
 
     console.log(mister);
     console.log(newPerson);
-  </script>
+</script>
 </body>
 
 </html>
-
 
 
 // ! ЧИТАЙ ВНИМАТЕЛЬНО, НЕ СПЕШИ:
