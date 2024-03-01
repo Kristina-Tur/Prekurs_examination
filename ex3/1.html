@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exam_4</title>
+</head>
+
+<body>
+<script>
+    const technologies= [
+        { title: "HTML&CSS", isDone: true },
+        { title: "JS", isDone: true },
+        { title: "ReactJS", isDone: false }
+    ];
+    /*Внутри этой функции мы возвращаем новый объект, содержащий все свойства из исходного объекта `technologies` и новое свойство `id`, устанавливаемое в `index + 1`.*/
+    const tasksWithId = technologies.map((technology, index) => ({ ...technology, id: index+ 1 }));
+
+    console.log(tasksWithId);
+
+</script>
+</body>
+
+</html>
+
+
+// ! ЧИТАЙ ВНИМАТЕЛЬНО, НЕ СПЕШИ:
+// Добавь в каждый объект массива id
+// Для этого тебе необходимо разобраться со всеми заглушками XXX YYY ZZZ
+// Пример: array ,,,inArray key (через пробел)
+Твой ответ:
+
+technologies technology index
